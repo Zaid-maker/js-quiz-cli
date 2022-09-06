@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
+
+/**
+ * Imports all required packages
+ */
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import gradient from 'gradient-string'
 import chalkAnimation from 'chalk-animation'
 import figlet from 'figlet'
 import { createSpinner } from 'nanospinner'
-
-// console.log(chalk.bgGreen('hi'))
 
 let playerName;
 
