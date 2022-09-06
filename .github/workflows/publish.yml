@@ -2,7 +2,7 @@ name: Publish Package
 
 on:
   release:
-    type: [published]
+    types: [published]
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
       - name: Publish package on NPM 📦
         run: npm publish
