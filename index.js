@@ -51,19 +51,34 @@ await askName()
 
 async function question1() {
     const answers = await inquirer.prompt({
-        name: 'Question 1',
+        name: 'question_1',
         type: 'list',
         message: 'JavaScript was created in 10 days then released on\n',
         choices: [
             'May 23rd, 1995',
             'Nov 24th, 1995',
             'Dec 4th, 1995',
-            'Dec 17, 1995'
-        ]
+            'Dec 17, 1996',
+        ],
     })
 
-    return handleAnswer(answers.question_1 == 'Dec 4th, 1995')
+    return handleAnswer(answers.question_1 === 'Dec 4th, 1995');
 }
+
+await question1()
+
+async function question2() {
+    const answers = await inquirer.prompt({
+        name: 'Question 2',
+        type: 'list',
+        message: 'What is x? var x = 1_1 + "1" + Number(1)\n',
+        choices: ['4', '"4"', '"1111"', '69420'],
+    })
+
+    return handleAnswer(answers.question_2 === '1111')
+}
+
+await question2()
 
 async function handleAnswer(isCorrect) {
     const spinner = createSpinner('Checking Your Answer....').start()
@@ -80,8 +95,6 @@ async function handleAnswer(isCorrect) {
         process.exit(1)
     }
 }
-
-await question1()
 
 function winner() {
     console.clear()
