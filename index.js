@@ -69,7 +69,7 @@ await question1()
 
 async function question2() {
     const answers = await inquirer.prompt({
-        name: 'Question 2',
+        name: 'question_2',
         type: 'list',
         message: 'What is x? var x = 1_1 + "1" + Number(1)\n',
         choices: ['4', '"4"', '"1111"', '69420'],
@@ -79,6 +79,19 @@ async function question2() {
 }
 
 await question2()
+
+async function question3() {
+    const answers = await inquirer.prompt({
+        name: 'question_3',
+        type: 'list',
+        message: `What is the first element in the array? ['🐏', '🦙', '🐍'].length = 0\n`,
+        choices: ['0', '🐏', '🐍', 'undefined'],
+    })
+
+    return handleAnswer(answers.question_3 === 'undefined')
+}
+
+await question3()
 
 async function handleAnswer(isCorrect) {
     const spinner = createSpinner('Checking Your Answer....').start()
