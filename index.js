@@ -130,6 +130,55 @@ async function question3() {
 await question3()
 
 /**
+ * It asks the user a question, and returns a boolean value based on whether or not the user answered
+ * correctly.
+ * @returns true or false
+ */
+async function question4() {
+    const answers = await inquirer.prompt({
+        name: 'question_4',
+        type: 'list',
+        message: 'Which of the following is NOT a primitive type?\n',
+        choices: [
+            'boolean',
+            'number',
+            'null',
+            'object'
+        ]
+    })
+
+    return handleAnswer(answers.question_4 === 'object')
+}
+
+/* It's calling the `question4()` function, and then waiting for it to finish before continuing. */
+await question4()
+
+/**
+ * It asks the user a question, and returns a boolean value based on the answer.
+ */
+async function question5() {
+    const answers = await inquirer.prompt({
+        name: 'question_5',
+        type: 'list',
+        message:
+            'JS is a high-level single-threaded, garbage-collected,\n' +
+            'interpreted(or just-in-time compiled), prototype-based,\n' +
+            'multi-paradigm, dynamic language with a ____ event loop\n',
+        choices: [
+            'multi-threaded',
+            'non-blocking', 
+            'synchronos',
+            'promise-based'
+        ]
+    })
+
+    return handleAnswer(answers.question_5 === 'non-blocking')
+}
+
+/* It's calling the `question5()` function, and then waiting for it to finish before continuing. */
+question5()
+
+/**
  * The function takes a boolean value as an argument and returns a promise.
  * @param isCorrect - A boolean value that indicates whether the player's answer was correct.
  */
