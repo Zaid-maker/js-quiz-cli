@@ -25,11 +25,7 @@
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.1",
     "inquirer": "^9.1.1",
-    "nanospinner": "^1.1.0",
-    "nodemon": "^2.0.19"
-  },
-  "devDependencies": {
-    "nodemon": "2.0.19"
+    "nanospinner": "^1.1.0"
   },
   "engines": {
     "node": "16.x"
