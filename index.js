@@ -7,6 +7,13 @@ import gradient from 'gradient-string'
 import chalkAnimation from 'chalk-animation'
 import figlet from 'figlet'
 import { createSpinner } from 'nanospinner'
+import updateNotifier from 'simple-update-notifier'
+import packageJson from './package.json' assert { type: 'json' };
+
+/* It's checking to see if there's a newer version of the package available. */
+updateNotifier({
+    pkg: packageJson
+})
 
 /* Declaring a variable. */
 let playerName;

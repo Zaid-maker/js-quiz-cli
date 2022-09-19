@@ -25,7 +25,8 @@
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.1",
     "inquirer": "^9.1.1",
-    "nanospinner": "^1.1.0"
+    "nanospinner": "^1.1.0",
+    "simple-update-notifier": "^1.0.7"
   },
   "engines": {
     "node": "16.x"
