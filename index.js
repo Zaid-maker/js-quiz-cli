@@ -176,6 +176,24 @@ async function question5() {
 question5();
 
 /**
+ * "This function asks the user a question, and then returns the result of the handleAnswer function,
+ * which takes a boolean as an argument."
+ */
+async function question6() {
+  const answers = await inquirer.prompt({
+    name: "question_6",
+    type: "list",
+    message: "Who Designed JavaScript?\n",
+    choices: ["Brendan Eich", "Eich Brendan", "None of the above"],
+  });
+
+  return handleAnswer(answers.question_6 === "Brenden Eich");
+}
+
+/* It's calling the `question6()` function, and then waiting for it to finish before continuing. */
+question6();
+
+/**
  * The function takes a boolean value as an argument and returns a promise.
  * @param isCorrect - A boolean value that indicates whether the player's answer was correct.
  */
