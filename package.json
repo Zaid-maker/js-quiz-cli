@@ -26,6 +26,6 @@
     "gradient-string": "^2.0.1",
     "inquirer": "^9.2.10",
     "nanospinner": "^1.1.0",
-    "simple-update-notifier": "^1.1.0"
+    "simple-update-notifier": "^2.0.0"
   }
 }
