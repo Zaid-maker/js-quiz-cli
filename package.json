@@ -22,7 +22,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "chalk-animation": "^2.0.3",
-    "figlet": "^1.5.2",
+    "figlet": "^1.7.0",
     "gradient-string": "^2.0.1",
     "inquirer": "^9.2.10",
     "nanospinner": "^1.1.0",
