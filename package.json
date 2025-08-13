@@ -24,7 +24,7 @@
     "chalk-animation": "^2.0.3",
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.1",
-    "inquirer": "^9.2.12",
+    "inquirer": "^10.0.0",
     "nanospinner": "^1.1.0",
     "simple-update-notifier": "^2.0.0"
   }
